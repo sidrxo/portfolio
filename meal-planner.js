@@ -27,7 +27,30 @@ const meals = [
       { name: "spinach", weight: 100, protein: 2.9, calories: 23 },
     ],
   },
+  {
+    name: "Salmon and Sweet Potato",
+    ingredients: [
+      { name: "salmon", weight: 100, protein: 22, calories: 208 },
+      { name: "sweet potato", weight: 200, protein: 2, calories: 103 },
+    ],
+  },
+  {
+    name: "Turkey and Quinoa",
+    ingredients: [
+      { name: "turkey", weight: 100, protein: 31, calories: 172 },
+      { name: "quinoa", weight: 200, protein: 8, calories: 222 },
+    ],
+  },
+  {
+    name: "Pork and Greens",
+    ingredients: [
+      { name: "pork", weight: 100, protein: 29, calories: 212 },
+      { name: "kale", weight: 100, protein: 2.5, calories: 33 },
+      { name: "arugula", weight: 100, protein: 1.5, calories: 25 },
+    ],
+  },
 ];
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -64,4 +87,3 @@ function chooseMeal(caloriePerMeal, proteinPerMeal) {
   return choices[Math.floor(Math.random()
     * choices.length)];
   }
-  
