@@ -44,7 +44,7 @@ form.addEventListener("submit", (event) => {
     if (!meal) {
       break;
     }
-    mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1}</h2>`;
+    mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1} - ${meal.name}</h2>`;
     for (const ingredient of meal.ingredients) {
       mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
     }
