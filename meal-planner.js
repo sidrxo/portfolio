@@ -31,7 +31,7 @@ const meals = [
     name: "Salmon and Sweet Potato",
     ingredients: [
       { name: "salmon", weight: 100, protein: 22, calories: 208 },
-      { name: "sweet potato", weight: 200, protein: 2, calories:103 },
+      { name: "sweet potato", weight: 200, protein: 2, calories: 103 },
     ],
   },
   {
@@ -51,40 +51,48 @@ const meals = [
   },
 ];
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const calorieGoal = calorieGoalInput.value;
-  const proteinGoal = proteinGoalInput.value;
-  const numberOfMeals = numberOfMealsInput.value;
-
-  const caloriePerMeal = calorieGoal / numberOfMeals;
-  const proteinPerMeal = proteinGoal / numberOfMeals;
-
-  let mealPlanHTML = "";
-  for (let i = 0; i < numberOfMeals; i++) {
-    // Select a random meal from the meals array
+function adjustMeal(meal, calorieGoal, proteinGoal) {
+  // Clone the meal object to avoid modifying the original
+  const adjustedMeal = { ...meal };
+  // Calculate the total calories and protein for the meal
+  let totalCalories = meal.ingredients.reduce((total, ingredient) => total + ingredient.calories, 0);
+  let totalProtein = meal.ingredients.reduce((total, ingredient) => total + ingredient.protein, 0);
+  // Calculate the difference between the total and the goals
+  let calorieDiff = Math.abs(totalCalories - calorieGoal);
+  let proteinDiff = Math.abs(totalProtein - proteinGoal);
+  // Calculate the 5% tolerance for the goals
+  const calorieTolerance = calorieGoal * 0.05; 
+  
+  function chooseMeal(caloriePerMeal, proteinPerMeal) {
+    // Randomly select a meal from the meals array
     const meal = meals[Math.floor(Math.random() * meals.length)];
-
-    // Calculate the total calories and total protein of the meal
-    const totalCalories = meal.ingredients.reduce((total, ingredient) => total + ingredient.calories, 0);
-    const totalProtein = meal.ingredients.reduce((total, ingredient) => total + ingredient.protein, 0);
-
-    // Adjust the ingredient weights to meet the calorie and protein goals within 5 either way
-    const calorieRatio = caloriePerMeal / totalCalories;
-    const proteinRatio = proteinPerMeal / totalProtein;
-
-    for (const ingredient of meal.ingredients) {
-      ingredient.weight *= calorieRatio * proteinRatio;
-    }
-
-    const mealName = (i === 0) ? "Breakfast" : (i === 1) ? "Lunch" : "Dinner";
-    mealPlanHTML += `<div class="meal"><h2>${mealName} - ${meal.name}</h2>`;
-    for (const ingredient of meal.ingredients) {
-      mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
-    }
-    mealPlanHTML += "</div>";
+    // Adjust the meal to meet the calorie and protein goals within 5%
+    const adjustedMeal = adjustMeal(meal, caloriePerMeal, proteinPerMeal);
+    return adjustedMeal;
   }
-  mealPlanDiv.innerHTML
-  = mealPlanHTML;
-});
-
+  
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const calorieGoal = calorieGoalInput.value;
+    const proteinGoal = proteinGoalInput.value;
+    const numberOfMeals = numberOfMealsInput.value;
+  
+    const caloriePerMeal = calorieGoal / numberOfMeals;
+    const proteinPerMeal = proteinGoal / numberOfMeals;
+  
+    let mealPlanHTML = "";
+    for (let i = 0; i < numberOfMeals; i++) {
+      const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
+      if (!meal) {
+        break;
+      }
+      const mealName = (i === 0) ? "Breakfast" : (i === 1) ? "Lunch" : "Dinner";
+      mealPlanHTML += `<div class="meal"><h2>${mealName} - ${meal.name}</h2>`;
+      for (const ingredient of meal.ingredients) {
+        mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
+      }
+      mealPlanHTML += "</div>";
+    }
+    mealPlanDiv.innerHTML = mealPlanHTML;
+  }); 
+}
