@@ -25,6 +25,8 @@ body {
   .ingredient {
     margin-bottom: 10px;
     border-bottom: 1px dotted #ccc;
+    display: flex;
+    align-items: flex-start;
   }
 
   .meal-plan {
