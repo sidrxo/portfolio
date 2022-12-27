@@ -15,8 +15,6 @@ body {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     margin-right: 7%;
     width: 33.333%;
-    position: relative;
-    left: 3%;
   }
 
   .meal h2 {
