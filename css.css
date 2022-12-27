@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  #meal-plan {
+    margin-top: 20px;
+  }
+  
+  .meal {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .meal h2 {
+    margin-top: 0;
+  }
+  
+  .ingredient {
+    margin-bottom: 10px;
+  }
+  
