@@ -27,7 +27,6 @@ form.addEventListener("submit", (event) => {
   let mealPlanHTML = "";
   for (let i = 0; i < numberOfMeals; i++) {
     mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1}</h2>`;
-    mealPlanHTML += `<div>${meal.name}</div>`;
     let remainingCalories = caloriePerMeal;
     let remainingProtein = proteinPerMeal;
     let remainingWeight = 2000; // 2000 grams is a rough estimate of the maximum weight of a meal
