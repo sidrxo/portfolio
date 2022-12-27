@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
     mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1}</h2>`;
     let remainingCalories = caloriePerMeal;
     let remainingProtein = proteinPerMeal;
-    let remainingWeight = 2000; // 2000 grams is a rough estimate of the maximum weight of a meal
+    let remainingWeight = 1000; // 2000 grams is a rough estimate of the maximum weight of a meal
     const mealIngredients = {};
     while (remainingCalories > 0 && remainingProtein > 0 && remainingWeight > 0) {
       const ingredient = chooseIngredient(remainingCalories, remainingProtein, remainingWeight);
