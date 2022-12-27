@@ -13,24 +13,27 @@ body {
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin-right: 10%;
+    float: left;
+    width: 33.333%;
+
   }
-  
+
   .meal h2 {
     margin-top: 0;
   }
-  
+
   .ingredient {
     margin-bottom: 10px;
     border-bottom: 1px dotted #ccc;
   }
+
   .meal-plan {
     display: flex;
     justify-content: space-around;
   }
   
-  .meal {
-    width: 33.333%;
-  }
+
   .form-container {
     width: 30%;
     margin: auto;
