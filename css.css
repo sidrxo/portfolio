@@ -31,4 +31,16 @@ body {
   .meal {
     width: 33.333%;
   }
+  .form-container {
+    width: 50%;
+    margin: auto;
+  }
   
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-control {
+    margin: 10px 0;
+  }
