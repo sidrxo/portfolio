@@ -62,18 +62,19 @@ form.addEventListener("submit", (event) => {
   const proteinPerMeal = proteinGoal / numberOfMeals;
 
   let mealPlanHTML = "";
-  for (let i = 0; i < numberOfMeals; i++) {
-    const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
-    if (!meal) {
-      break;
-    }
-    mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1} - ${meal.name}</h2>`;
-    for (const ingredient of meal.ingredients) {
-      mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
-    }
-    mealPlanHTML += "</div>";
+for (let i = 0; i < numberOfMeals; i++) {
+  const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
+  if (!meal) {
+    break;
   }
-  mealPlanDiv.innerHTML = mealPlanHTML;
+  const mealName = (i === 0) ? "Breakfast" : (i === 1) ? "Lunch" : "Dinner";
+  mealPlanHTML += `<div class="meal"><h2>${mealName} - ${meal.name}</h2>`;
+  for (const ingredient of meal.ingredients) {
+    mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
+  }
+  mealPlanHTML += "</div>";
+}
+mealPlanDiv.innerHTML = mealPlanHTML;
 });
 
 function chooseMeal(caloriePerMeal, proteinPerMeal) {
