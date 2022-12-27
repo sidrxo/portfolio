@@ -19,4 +19,11 @@ body {
   .ingredient {
     margin-bottom: 10px;
   }
+  .meal-plan {
+    display: flex;
+    flex-wrap: wrap;
+  }
   
+  .meal {
+    width: 33.333%;
+  }
