@@ -21,9 +21,10 @@ body {
   }
   .meal-plan {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
   }
   
   .meal {
     width: 33.333%;
   }
+  
