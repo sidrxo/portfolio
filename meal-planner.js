@@ -51,48 +51,40 @@ const meals = [
   },
 ];
 
-function adjustMeal(meal, calorieGoal, proteinGoal) {
-  // Clone the meal object to avoid modifying the original
-  const adjustedMeal = { ...meal };
-  // Calculate the total calories and protein for the meal
-  let totalCalories = meal.ingredients.reduce((total, ingredient) => total + ingredient.calories, 0);
-  let totalProtein = meal.ingredients.reduce((total, ingredient) => total + ingredient.protein, 0);
-  // Calculate the difference between the total and the goals
-  let calorieDiff = Math.abs(totalCalories - calorieGoal);
-  let proteinDiff = Math.abs(totalProtein - proteinGoal);
-  // Calculate the 5% tolerance for the goals
-  const calorieTolerance = calorieGoal * 0.05; 
-  
-  function chooseMeal(caloriePerMeal, proteinPerMeal) {
-    // Randomly select a meal from the meals array
-    const meal = meals[Math.floor(Math.random() * meals.length)];
-    // Adjust the meal to meet the calorie and protein goals within 5%
-    const adjustedMeal = adjustMeal(meal, caloriePerMeal, proteinPerMeal);
-    return adjustedMeal;
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const calorieGoal = calorieGoalInput.value;
+  const proteinGoal = proteinGoalInput.value;
+  const numberOfMeals = numberOfMealsInput.value;
+
+  const caloriePerMeal = calorieGoal / numberOfMeals;
+  const proteinPerMeal = proteinGoal / numberOfMeals;
+
+  let mealPlanHTML = "";
+for (let i = 0; i < numberOfMeals; i++) {
+  const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
+  if (!meal) {
+    break;
   }
-  
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const calorieGoal = calorieGoalInput.value;
-    const proteinGoal = proteinGoalInput.value;
-    const numberOfMeals = numberOfMealsInput.value;
-  
-    const caloriePerMeal = calorieGoal / numberOfMeals;
-    const proteinPerMeal = proteinGoal / numberOfMeals;
-  
-    let mealPlanHTML = "";
-    for (let i = 0; i < numberOfMeals; i++) {
-      const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
-      if (!meal) {
-        break;
-      }
-      const mealName = (i === 0) ? "Breakfast" : (i === 1) ? "Lunch" : "Dinner";
-      mealPlanHTML += `<div class="meal"><h2>${mealName} - ${meal.name}</h2>`;
-      for (const ingredient of meal.ingredients) {
-        mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
-      }
-      mealPlanHTML += "</div>";
-    }
-    mealPlanDiv.innerHTML = mealPlanHTML;
-  }); 
+  const mealName = (i === 0) ? "Breakfast" : (i === 1) ? "Lunch" : "Dinner";
+  mealPlanHTML += `<div class="meal"><h2>${mealName} - ${meal.name}</h2>`;
+  for (const ingredient of meal.ingredients) {
+    mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
+  }
+  mealPlanHTML += "</div>";
 }
+mealPlanDiv.innerHTML = mealPlanHTML;
+});
+
+function chooseMeal(caloriePerMeal, proteinPerMeal) {
+  const choices = meals.filter(
+    (meal) => meal.ingredients.reduce((totalCalories, ingredient) => totalCalories + ingredient.calories, 0) <= caloriePerMeal
+      && meal.ingredients.reduce((totalProtein, ingredient) => totalProtein + ingredient.protein, 0) <= proteinPerMeal
+  );
+  if (choices.length === 0) {
+    return null;
+  }
+  return choices[Math.floor(Math.random()
+    * choices.length)];
+  }
