@@ -4,15 +4,29 @@ const proteinGoalInput = document.getElementById("protein-goal");
 const numberOfMealsInput = document.getElementById("number-of-meals");
 const mealPlanDiv = document.getElementById("meal-plan");
 
-const ingredients = [
-  { name: "chicken", protein: 26, calories: 165, weight: 100 },
-  { name: "beef", protein: 28, calories: 239, weight: 100 },
-  { name: "tofu", protein: 20, calories: 76, weight: 100 },
-  { name: "rice", protein: 5, calories: 205, weight: 100 },
-  { name: "pasta", protein: 8, calories: 221, weight: 100 },
-  { name: "broccoli", protein: 2.8, calories: 55, weight: 100 },
-  { name: "spinach", protein: 2.9, calories: 23, weight: 100 },
-  { name: "sweet potato", protein: 2, calories: 103, weight: 100 },
+const meals = [
+  {
+    name: "Chicken and Rice",
+    ingredients: [
+      { name: "chicken", weight: 100, protein: 26, calories: 165 },
+      { name: "rice", weight: 200, protein: 5, calories: 205 },
+    ],
+  },
+  {
+    name: "Beef and Pasta",
+    ingredients: [
+      { name: "beef", weight: 100, protein: 28, calories: 239 },
+      { name: "pasta", weight: 200, protein: 8, calories: 221 },
+    ],
+  },
+  {
+    name: "Tofu and Vegetables",
+    ingredients: [
+      { name: "tofu", weight: 100, protein: 20, calories: 76 },
+      { name: "broccoli", weight: 100, protein: 2.8, calories: 55 },
+      { name: "spinach", weight: 100, protein: 2.9, calories: 23 },
+    ],
+  },
 ];
 
 form.addEventListener("submit", (event) => {
@@ -26,47 +40,28 @@ form.addEventListener("submit", (event) => {
 
   let mealPlanHTML = "";
   for (let i = 0; i < numberOfMeals; i++) {
-    mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1}</h2>`;
-    let remainingCalories = caloriePerMeal;
-    let remainingProtein = proteinPerMeal;
-    let remainingWeight = 1000; // 2000 grams is a rough estimate of the maximum weight of a meal
-    const mealIngredients = {};
-    while (remainingCalories > 0 && remainingProtein > 0 && remainingWeight > 0) {
-      const ingredient = chooseIngredient(remainingCalories, remainingProtein, remainingWeight);
-      if (!ingredient) {
-        break;
-      }
-      remainingCalories -= ingredient.calories;
-      remainingProtein -= ingredient.protein;
-      remainingWeight -= ingredient.weight;
-      if (!mealIngredients[ingredient.name]) {
-        mealIngredients[ingredient.name] = {
-          weight: ingredient.weight,
-          calories: ingredient.calories,
-          protein: ingredient.protein,
-        };
-      } else {
-        mealIngredients[ingredient.name].weight += ingredient.weight;
-        mealIngredients[ingredient.name].calories += ingredient.calories;
-        mealIngredients[ingredient.name].protein += ingredient.protein;
-      }
+    const meal = chooseMeal(caloriePerMeal, proteinPerMeal);
+    if (!meal) {
+      break;
     }
-    for (const ingredientName in mealIngredients) {
-      const ingredient = mealIngredients[ingredientName];
-      mealPlanHTML += `<div class="ingredient">${ingredientName} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
+    mealPlanHTML += `<div class="meal"><h2>Meal ${i + 1}</h2>`;
+    for (const ingredient of meal.ingredients) {
+      mealPlanHTML += `<div class="ingredient">${ingredient.name} (${ingredient.weight}g) - ${ingredient.calories} calories, ${ingredient.protein}g protein</div>`;
     }
     mealPlanHTML += "</div>";
   }
   mealPlanDiv.innerHTML = mealPlanHTML;
 });
 
-function chooseIngredient(remainingCalories, remainingProtein, remainingWeight) {
-  const choices = ingredients.filter(
-    (ingredient) =>
-      ingredient.calories <= remainingCalories && ingredient.protein <= remainingProtein && ingredient.weight <= remainingWeight
+function chooseMeal(caloriePerMeal, proteinPerMeal) {
+  const choices = meals.filter(
+    (meal) => meal.ingredients.reduce((totalCalories, ingredient) => totalCalories + ingredient.calories, 0) <= caloriePerMeal
+      && meal.ingredients.reduce((totalProtein, ingredient) => totalProtein + ingredient.protein, 0) <= proteinPerMeal
   );
   if (choices.length === 0) {
     return null;
   }
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+  return choices[Math.floor(Math.random()
+    * choices.length)];
+  }
+  
