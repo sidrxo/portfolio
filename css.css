@@ -1,50 +1,12 @@
+.head {
+  padding-left: 10%;
+}
+
+
+
+
 body {
-    font-family: helvetica;
-    background-color: #d9d9d9;
+    font-family: Helvetica;
+    background-color: #ffff;
   }
   
-  #meal-plan {
-    margin-top: 20px;
-    margin-left: 3%;
-  }
-  
-  .meal {
-    border: 2px solid #191919;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    margin-right: 3%;
-    width: 33.333%;
-  }
-
-  .meal h2 {
-    margin-top: 0;
-  }
-
-  .ingredient {
-    margin-bottom: 10px;
-    border-bottom: 1px dotted #ccc;
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .meal-plan {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-
-  .form-container {
-    width: 20%;
-    margin: auto;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-control {
-    margin: 10px 0;
-  }
