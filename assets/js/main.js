@@ -6,12 +6,31 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-$(document).ready(function() {
-  $('.wide').click(function() {
-    var url = $(this).data('url');
-    $('#bioheader').load(url, function() {
-      $('#bioheader').addClass('slide-in-right');
+document.addEventListener("DOMContentLoaded", function() {
+  const projectTiles = document.querySelectorAll(".project-tile");
+  projectTiles.forEach(tile => {
+    tile.addEventListener("click", function() {
+      const pageUrl = this.getAttribute("data-page-url");
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", pageUrl, true);
+      xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          const newContent = this.responseText;
+          const bioheader = document.getElementById("bioheader");
+          bioheader.innerHTML = newContent;
+        }
+      };
+      xhr.send();
     });
-    $('.doubletile').addClass('slide-out-left');
   });
 });
+
+  $(document).ready(function() {
+    $('.wide').click(function() {
+      var url = $(this).data('url');
+      $('#bioheader').load(url, function() {
+        $('#bioheader').addClass('slide-in-right');
+      });
+      $('.doubletile').addClass('slide-out-left');
+    });
+  });
