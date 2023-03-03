@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
           const newContent = this.responseText;
-          const bioheader = document.getElementById("bioheader");
+          const bioheader = document.getElementById("projectContent");
           bioheader.innerHTML = newContent;
         }
       };
