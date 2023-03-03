@@ -25,12 +25,3 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-  $(document).ready(function() {
-    $('.wide').click(function() {
-      var url = $(this).data('url');
-      $('#bioheader').load(url, function() {
-        $('#bioheader').addClass('slide-in-right');
-      });
-      $('.doubletile').addClass('slide-out-left');
-    });
-  });
