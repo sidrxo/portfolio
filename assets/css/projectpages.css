@@ -11,6 +11,8 @@
     overscroll-behavior-x: auto;
     scroll-snap-type: x mandatory;
     scale: 2.1;
+    margin-bottom: 100px;
+
   }
   
   .horizontal-snap > a {
@@ -27,7 +29,5 @@ footer{
  margin-bottom: 13%;
 }
 
-#projectContent{
-  margin-bottom: 100px;
-}
+
 
