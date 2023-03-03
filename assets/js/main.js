@@ -6,13 +6,21 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-function loadProjectPage(pageUrl) {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("projectContent").innerHTML = this.responseText;
-      }
-  };
-  xhr.open("GET", pageUrl, true);
-  xhr.send();
-}
+document.addEventListener("DOMContentLoaded", function() {
+  const projectTiles = document.querySelectorAll(".project-tile");
+  projectTiles.forEach(tile => {
+    tile.addEventListener("click", function() {
+      const pageUrl = this.getAttribute("data-page-url");
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", pageUrl, true);
+      xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          const newContent = this.responseText;
+          const bioheader = document.getElementById("bioheader");
+          bioheader.innerHTML = newContent;
+        }
+      };
+      xhr.send();
+    });
+  });
+});
