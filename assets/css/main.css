@@ -1,6 +1,8 @@
 body{
 	margin: 0;
     padding:0;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 }
 
 
@@ -23,9 +25,14 @@ body{
 	padding-left: 10%;
 	}
 
+#projectContent
+{
+	scroll-snap-align: center;
+}
 
 	
 .doubletile {
+	scroll-snap-align: center;
 	display: flex;
 	height: 350px;
 	font-family: Helvetica;
