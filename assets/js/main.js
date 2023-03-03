@@ -19,3 +19,6 @@ function loadProjectPage(pageUrl) {
   xhr.open("GET", pageUrl, true);
   xhr.send();
 }
+function loadNewPage(pageUrl) {
+  window.location.replace(pageUrl);
+}
