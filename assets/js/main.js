@@ -12,7 +12,7 @@ function loadProjectPage(url) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var content = xhr.responseText;
       document.getElementById("projectContent").innerHTML = content;
-      document.getElementById("doubleContainer")[0].style.display = "none"; // hide the doubletile div when new content is loaded
+      document.getElementsByClassName("doubleContainer")[0].style.display = "none"; // hide the doubletile div when new content is loaded
     }
   };
   xhr.open("GET", url, true);
