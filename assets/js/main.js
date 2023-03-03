@@ -6,19 +6,15 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-$(document).ready(function() {
-  // When a project div is clicked
-  $('.project').click(function(event) {
-    // Prevent the default action
-    event.preventDefault();
-    // Get the URL of the project page
-    var url = $(this).data('url');
-    // Hide all elements of the old page
-    $('body > *:not(#projectContent)').hide();
-    // Load the project page into the project container using AJAX
-    $('#projectContent').load(url, function() {
-      // Show the project container after the project page is loaded
-      $('#projectContent').show();
-    });
-  });
-});
+function loadProjectPage(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var content = xhr.responseText;
+      document.getElementById("projectContent").innerHTML = content;
+      document.getElementsByClassName("doubletile")[0].style.display = "none"; // hide the doubletile div when new content is loaded
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.send();
+}
