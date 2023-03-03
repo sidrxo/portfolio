@@ -25,8 +25,3 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-$('.doubletile').click(function() {
-  $('.doubletile').css({
-      'display': 'none',
-  });
-});
