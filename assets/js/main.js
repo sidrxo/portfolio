@@ -6,25 +6,13 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-$(document).ready(function() {
-  // Add click event listeners to project tiles
-  $('.project-tile').on('click', function(e) {
-      e.preventDefault();
-      var url = $(this).data('url');
-      loadProject(url);
-  });
-});
-
-function loadProject(url) {
-  // Send Ajax request to load project content
-  $.ajax({
-      url: url,
-      success: function(data) {
-          // Insert project content into container element
-          $('#project-container').html(data);
-      },
-      error: function() {
-          alert('Error loading project content');
+function loadProjectPage(pageUrl) {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("projectContent").innerHTML = this.responseText;
       }
-  });
+  };
+  xhr.open("GET", pageUrl, true);
+  xhr.send();
 }
