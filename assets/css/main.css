@@ -36,6 +36,17 @@ body{
 		
   }
 
+  .doubletile2 {
+	display: flex;
+	height: 350px;
+	font-family: Helvetica;
+	margin: 0;
+	padding-left: 10% ;	
+	padding-right: 10%;
+	overflow: hidden;
+		
+  }
+
 		.wide {
 			width: 55%;
 			background-size: 100%;

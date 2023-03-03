@@ -13,6 +13,8 @@ function loadProjectPage(url) {
       var content = xhr.responseText;
       document.getElementById("projectContent").innerHTML = content;
       document.getElementsByClassName("doubletile")[0].style.display = "none"; // hide the doubletile div when new content is loaded
+      document.getElementsByClassName("doubletile2")[0].style.display = "none"; // hide the doubletile div when new content is loaded
+
     }
   };
   xhr.open("GET", url, true);
