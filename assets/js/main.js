@@ -6,21 +6,19 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const projectTiles = document.querySelectorAll(".project-tile");
-  projectTiles.forEach(tile => {
-    tile.addEventListener("click", function() {
-      const pageUrl = this.getAttribute("data-page-url");
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", pageUrl, true);
-      xhr.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-          const newContent = this.responseText;
-          const bioheader = document.getElementById("projectContent");
-          bioheader.innerHTML = newContent;
-        }
-      };
-      xhr.send();
+$(document).ready(function() {
+  // When a project div is clicked
+  $('.project').click(function(event) {
+    // Prevent the default action
+    event.preventDefault();
+    // Get the URL of the project page
+    var url = $(this).data('url');
+    // Hide all elements of the old page
+    $('body > *:not(#projectContent)').hide();
+    // Load the project page into the project container using AJAX
+    $('#projectContent').load(url, function() {
+      // Show the project container after the project page is loaded
+      $('#projectContent').show();
     });
   });
 });
