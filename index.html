@@ -6,9 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet"href="assets/css/horizontal-menu.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript" src="./assets/js/main.js"></script>
-		<script type="text/javascript" src="./assets/js/moving.js"></script>
-
 
 	</head>
 	
@@ -40,29 +39,31 @@
 			<div id = "bioheader">
 			</div>
 
-		<div class="doubletile">
-			<div class = "wide" id = "picture1" onclick="location.href='./gogrind.html';" style="cursor: pointer; background-position: left;">
-					<h2>go grind</h2>
+			<div class="doubletile">
+				<div class="wide" id="picture1" onclick="loadContent('./gogrind.html .horizontal-snap', 'project-container');" data-target="project-container">					<h2>go grind</h2>
 					<h3>portable coffee grinder</h3>
-			</div>
-			<div class = "narrow" id = "picture2" onclick="location.href='./vnl1.html';" style="cursor: pointer;">
-				<div class = "narrow" id="text2">
-					<h2>VNL1</h2>
-					<h3>family record player</h3>
+				</div>
+				<div class="narrow project-tile" id="picture2" data-url="./vnl1.html#">
+					<div class="narrow" id="text2">
+						<h2>VNL1</h2>
+						<h3>family record player</h3>
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="doubletile">
-			<div id = "picture3" onclick="location.href='./quiet.html';" style="cursor: pointer;">
-				<h2>quiet.</h2>
-				<h3>hospital sleep aid</h3>
+			
+			<div class="doubletile">
+				<div class="project-tile" id="picture3" data-url="./quiet.html#">
+					<h2>quiet.</h2>
+					<h3>hospital sleep aid</h3>
+				</div>
+				<div class="wide project-tile" id="picture4" data-url="./cad.html#">
+					<h2>CAD</h2>
+					<h3>render weekly projects</h3>
+				</div>
 			</div>
-			<div class = "wide" id = "picture4" onclick="location.href='./cad.html';" style="cursor: pointer;">
-				<h2>CAD</h2>
-				<h3>render weekly projects</h3>
-			</div>
-		</div>
+			
+			<div id="project-container"></div>
+			
 
 		
 		
