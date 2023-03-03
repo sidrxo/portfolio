@@ -5,22 +5,20 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
+$(document).ready(function() {
+  // Listen for clicks on project tiles
+  $('.wide, .narrow').on('click', function() {
+    var url = $(this).data('url');
 
-document.addEventListener("DOMContentLoaded", function() {
-  const projectTiles = document.querySelectorAll(".project-tile");
-  projectTiles.forEach(tile => {
-    tile.addEventListener("click", function() {
-      const pageUrl = this.getAttribute("data-page-url");
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", pageUrl, true);
-      xhr.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-          const newContent = this.responseText;
-          const bioheader = document.getElementById("bioheader");
-          bioheader.innerHTML = newContent;
-        }
-      };
-      xhr.send();
+    // Send XHR request to load project content
+    $.ajax({
+      url: url,
+      success: function(data) {
+        // Replace current project tiles with new content
+        $('.doubletile').fadeOut(300, function() {
+          $(this).html(data).fadeIn(300);
+        });
+      }
     });
   });
 });
