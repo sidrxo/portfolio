@@ -1,51 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>My Portfolio</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<header class="container">
-		<h1>My Portfolio</h1>
-	</header>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sid Rao Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet"href="assets/css/horizontal-menu.css">
+		<script type="text/javascript" src="./assets/js/main.js"></script>
+		<script type="text/javascript" src="./assets/js/moving.js"></script>
+
+
+	</head>
 	
-	<section class="section container">
-		<h2>About Me</h2>
-		<p>Hi, my name is [Your Name] and I'm a [Your Profession]. I have experience in [Your Skills/Expertise]. I am passionate about [Your Interests].</p>
-	</section>
-	
-	<section class="section container">
-		<h2>My Work</h2>
-		<div id="project-container" class="project-container">
-			<div class="project">
-				<h3>Project 1</h3>
-				<p>Description of Project 1</p>
+	<div id="bar">
+		<div class="progress-container" style = "position: fixed;">
+			<div class="progress-bar" id="myBar"></div>
+		</div>
+	</div>
+
+	<body>
+		
+		<header class = "myClass" id = nameheader>
+			<h1>SID<br>RAO</h1>		
+		</header>
+		<div class = "myClass">		
+			<nav>
+			<ul id="mainMenu">
+				<li><a href="" style = "opacity:1;">product design</a></li>
+				<li><a href="photography.html">photography</a></li>
+				<li><a href="resume.html">resume</a></li>
+				<li><a>contact</a></li>
+			</ul>
+			</nav>
+		</div>
+		<img id="arrow" src="images/ezgif-2-1f575f9518-removebg-preview.png" alt="">
+		<div id = "linkedin" onclick="window.open('https://www.linkedin.com/in/sid-rao-dzn/')" style="cursor: pointer;"> <img src="./images/linkedin.png"width="50"></div>
+		<div id = "email" 	onclick="window.open('mailto:sidrao@email.com')"style="cursor: pointer;"> <img src="./images/toppng.com-font-email-comments-email-icon-square-981x981.png"width="50"></div>
+		
+			<div id = "bioheader">
 			</div>
-			<div class="project">
-				<h3>Project 2</h3>
-				<p>Description of Project 2</p>
+
+		<div class="doubletile">
+			<div class = "wide" id = "picture1" onclick="location.href='./gogrind.html';" style="cursor: pointer; background-position: left;">
+					<h2>go grind</h2>
+					<h3>portable coffee grinder</h3>
 			</div>
-			<div class="project">
-				<h3>Project 3</h3>
-				<p>Description of Project 3</p>
-			</div>
-			<div class="project">
-				<h3>Project 4</h3>
-				<p>Description of Project 4</p>
-			</div>
-			<div class="project">
-				<h3>Project 5</h3>
-				<p>Description of Project 5</p>
+			<div class = "narrow" id = "picture2" onclick="location.href='./vnl1.html';" style="cursor: pointer;">
+				<div class = "narrow" id="text2">
+					<h2>VNL1</h2>
+					<h3>family record player</h3>
+				</div>
 			</div>
 		</div>
-	</section>
-	
-	<section class="section container">
-		<h2>Contact Me</h2>
-		<p>You can contact me by email at [Your Email Address] or by phone at [Your Phone Number].</p>
-	</section>
+		
+		<div class="doubletile">
+			<div id = "picture3" onclick="location.href='./quiet.html';" style="cursor: pointer;">
+				<h2>quiet.</h2>
+				<h3>hospital sleep aid</h3>
+			</div>
+			<div class = "wide" id = "picture4" onclick="location.href='./cad.html';" style="cursor: pointer;">
+				<h2>CAD</h2>
+				<h3>render weekly projects</h3>
+			</div>
+		</div>
 
-	<script src="script.js"></script>
-</body>
-</html>
+		
+		
+
+
+	</body>

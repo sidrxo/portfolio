@@ -1,0 +1,76 @@
+
+#mainMenu {
+	margin:0px;
+	width:900px;
+    font-size: 1em;
+    position: relative;
+	padding-left: 9%;
+    margin-top: -30px;
+	animation: 0.5s ease-out 0s 1 slideInFromLeft;
+
+
+}
+#mainMenu li {
+	display:block;
+	width:140px;
+	float:left;
+	border:1px solid white;
+    text-align: center;
+    color: black;
+}
+
+#mainMenu a {
+	padding:3px;
+	text-decoration:none;
+	background-color:#fff;
+	color: black;
+    opacity: 0.4;
+	font-family: Helvetica;
+
+}
+
+#mainMenu a:hover {
+    opacity: 1;
+}
+
+#arrow
+{
+    position: absolute;
+    width: 10%;
+    transform: scaleY(-1);
+    top: 270px;
+    right: 640px;
+    rotate: -17deg;
+
+}
+
+#linkedin {
+	position: absolute;
+	display: inline-block;
+	position: absolute;
+    top: 220px;
+    right: 595px;
+	opacity: 0.5;
+}
+
+#email {
+	position: absolute;
+	display: inline-block;
+	position: absolute;
+    top: 220px;
+    right: 535px;
+	opacity: 0.5;
+
+}
+
+#linkedin:hover
+{
+	opacity: 1;
+}
+
+#email:hover
+{
+	opacity: 1;
+}
+
+
