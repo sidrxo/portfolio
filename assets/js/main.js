@@ -11,9 +11,24 @@ function loadProjectPage(url) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var content = xhr.responseText;
-      document.getElementById("projectContent").innerHTML = content;
-      document.getElementsByClassName("doubletile")[0].style.display = "none"; // hide the doubletile div when new content is loaded
-      document.getElementsByClassName("doubletile2")[0].style.display = "none"; // hide the doubletile div when new content is loaded
+      var projectContent = document.getElementById("projectContent");
+      var oldContent = projectContent.innerHTML;
+
+      // Fade out the old content
+      projectContent.classList.add("fade-out");
+      setTimeout(function() {
+        projectContent.innerHTML = content;
+        // Fade in the new content
+        projectContent.classList.remove("fade-out");
+        projectContent.classList.add("fade-in");
+        setTimeout(function() {
+          projectContent.classList.remove("fade-in");
+        }, 500); // Set the duration of the fade in animation in milliseconds
+      }, 500); // Set the duration of the fade out animation in milliseconds
+
+      // Hide the doubletile divs
+      document.getElementsByClassName("doubletile")[0].style.display = "none";
+      document.getElementsByClassName("doubletile2")[0].style.display = "none";
     }
   };
   xhr.open("GET", url, true);
