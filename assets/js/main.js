@@ -23,6 +23,8 @@ function loadProjectPage(url) {
         projectContent.classList.add("fade-in");
         setTimeout(function() {
           projectContent.classList.remove("fade-in");
+          // Scroll to the top of the new content
+          projectContent.scrollIntoView({ behavior: 'smooth' });
         }, 500); // Set the duration of the fade in animation in milliseconds
       }, 500); // Set the duration of the fade out animation in milliseconds
 
@@ -34,3 +36,4 @@ function loadProjectPage(url) {
   xhr.open("GET", url, true);
   xhr.send();
 }
+
