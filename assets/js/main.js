@@ -7,9 +7,13 @@ function myFunction() {
 } 
 
 function loadProjectPage(url) {
-  $.get(url, function(data) { // use jQuery's $.get() method to make a GET request to the specified URL
-    $('#projectContent').html(data); // set the content of the #projectContent element to the response data using jQuery's .html() method
-    $('.doubletile').hide(); // hide all elements with class name "doubletile" using jQuery's .hide() method
-    $('.doubletile2').hide(); // hide all elements with class name "doubletile2" using jQuery's .hide() method
+  $.get(url, function(data) {
+    // Fade out the .doubletile and .doubletile2 elements
+    $('.doubletile, .doubletile2').fadeOut('slow', function() {
+      // Once the fade-out is complete, update the content of #projectContent
+      $('#projectContent').html(data);
+      // Fade in the #projectContent element
+      $('#projectContent').fadeIn('slow');
+    });
   });
 }
