@@ -7,15 +7,9 @@ function myFunction() {
 } 
 
 function loadProjectPage(url) {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      var content = xhr.responseText;
-      document.getElementById("projectContent").innerHTML = content;
-      document.getElementsByClassName("doubletile")[0].style.display = "none"; // hide the doubletile div when new content is loaded
-      document.getElementsByClassName("doubletile2")[0].style.display = "none"; // hide the doubletile div when new content is loaded
-    }
-  };
-  xhr.open("GET", url, true);
-  xhr.send();
+  $.get(url, function(data) { // use jQuery's $.get() method to make a GET request to the specified URL
+    $('#projectContent').html(data); // set the content of the #projectContent element to the response data using jQuery's .html() method
+    $('.doubletile').hide(); // hide all elements with class name "doubletile" using jQuery's .hide() method
+    $('.doubletile2').hide(); // hide all elements with class name "doubletile2" using jQuery's .hide() method
+  });
 }
