@@ -16,4 +16,5 @@ function loadProjectPage(url) {
       $('#projectContent').fadeIn('slow');
     });
   });
+  return false
 }
