@@ -6,15 +6,24 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
+// Attach a click event handler to the link element
+$('.picture1').on('click', function(event) {
+  // Prevent the link from performing its default action
+  event.preventDefault();
+  
+  // Get the URL from the link's "href" attribute
+  var url = $(this).attr('href');
+  
+  // Call the loadProjectPage function with the URL
+  loadProjectPage(url);
+});
+
+// Define the loadProjectPage function
 function loadProjectPage(url) {
   $.get(url, function(data) {
-    // Fade out the .doubletile and .doubletile2 elements
     $('.doubletile, .doubletile2').fadeOut('slow', function() {
-      // Once the fade-out is complete, update the content of #projectContent
       $('#projectContent').html(data);
-      // Fade in the #projectContent element
       $('#projectContent').fadeIn('slow');
-      return false
     });
   });
 }
