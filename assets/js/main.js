@@ -7,7 +7,7 @@ function myFunction() {
 } 
 
 // Add an event listener to the link with class "projectLink"
-$('.projectLink').on('click', function(event) {
+$('.doubletile').on('click', function(event) {
   // Prevent the default behavior of clicking on a link
   event.preventDefault();
   
