@@ -10,7 +10,6 @@
   overscroll-behavior-x: auto;
   scroll-snap-type: x mandatory;
   scale: 2.1;
-  padding-bottom: 4%;
 }
 
 .horizontal-snap > a {
