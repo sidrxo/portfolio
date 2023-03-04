@@ -7,10 +7,7 @@ function myFunction() {
 } 
 
 function loadProjectPage(url) {
-  var scrollTop = $(window).scrollTop(); // Get the current scroll position of the page
-
   $.get(url, function(data) {
-    $(window).scrollTop(scrollTop); // Set the scroll position back to the original value
     // Fade out the .doubletile and .doubletile2 elements
     $('.doubletile, .doubletile2').fadeOut('slow', function() {
       // Once the fade-out is complete, update the content of #projectContent
