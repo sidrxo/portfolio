@@ -10,7 +10,7 @@
   overscroll-behavior-x: auto;
   scroll-snap-type: x mandatory;
   scale: 2.1;
-
+  padding-bottom: 10%;
 }
 
 .horizontal-snap > a {
@@ -22,10 +22,6 @@
   object-fit: contain;
 }
 
-#projectContent
-{
-  padding-bottom: 10%;
-}
 
 
 
