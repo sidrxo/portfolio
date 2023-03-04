@@ -10,7 +10,6 @@
     overscroll-behavior-x: auto;
     scroll-snap-type: x mandatory;
     scale: 2.1;
-    margin-bottom: 2%; 
   }
   
   .horizontal-snap > a {
@@ -20,6 +19,11 @@
   .horizontal-snap img {
     width: 400px;
     object-fit: contain;
+  }
+
+  .pagesContainer
+  {
+  padding-bottom: 5%;
   }
 
 
