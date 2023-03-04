@@ -118,7 +118,7 @@ h3 {
 
 #picture3{
 flex: 1;
-	background-size: 125%;
+	background-size: 125% !important;
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;	
@@ -130,7 +130,7 @@ flex: 1;
 }
 
 #picture3:hover {
-	background-size: 155%;  		
+	background-size: 155% !important;  		
 }
 
 .progress-container {
