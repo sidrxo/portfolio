@@ -10,6 +10,7 @@
   overscroll-behavior-x: auto;
   scroll-snap-type: x mandatory;
   scale: 2.1;
+
 }
 
 .horizontal-snap > a {
@@ -23,7 +24,7 @@
 
 .pagesContainer
 {
-  padding-bottom: -10%;
+  padding-bottom: 10%;
 }
 
 
