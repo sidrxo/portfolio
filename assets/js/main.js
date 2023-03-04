@@ -14,7 +14,7 @@ function loadProjectPage(url) {
       $('#projectContent').html(data);
       // Fade in the #projectContent element
       $('#projectContent').fadeIn('slow');
+      return false
     });
   });
-  return false
 }
