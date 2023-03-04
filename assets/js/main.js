@@ -6,20 +6,11 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-// Add an event listener to the link with class "projectLink"
-$('.doubletile').on('click', function(event) {
-  // Prevent the default behavior of clicking on a link
-  event.preventDefault();
-  
-  // Get the URL from the link's href attribute
-  var url = $(this).attr('href');
-  
-  // Load the project page using AJAX
-  loadProjectPage(url);
-});
-
 function loadProjectPage(url) {
+  var scrollTop = $(window).scrollTop(); // Get the current scroll position of the page
+
   $.get(url, function(data) {
+    $(window).scrollTop(scrollTop); // Set the scroll position back to the original value
     // Fade out the .doubletile and .doubletile2 elements
     $('.doubletile, .doubletile2').fadeOut('slow', function() {
       // Once the fade-out is complete, update the content of #projectContent
