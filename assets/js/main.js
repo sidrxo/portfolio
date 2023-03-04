@@ -6,6 +6,18 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
+// Add an event listener to the link with class "projectLink"
+$('.projectLink').on('click', function(event) {
+  // Prevent the default behavior of clicking on a link
+  event.preventDefault();
+  
+  // Get the URL from the link's href attribute
+  var url = $(this).attr('href');
+  
+  // Load the project page using AJAX
+  loadProjectPage(url);
+});
+
 function loadProjectPage(url) {
   $.get(url, function(data) {
     // Fade out the .doubletile and .doubletile2 elements
