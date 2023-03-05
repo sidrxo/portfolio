@@ -138,6 +138,7 @@ h3 {
 	width: 100%;
 	height: 8px;
 	background: #ccc;
+	position: fixed;
 	}
 
 
@@ -162,6 +163,8 @@ h3 {
 	[class*="doubletile"] {
 	  width: 100vw;
 	  flex-flow: column wrap;
+	  padding: 0;	
+
 	}
 
 	[class*="wide"] {
