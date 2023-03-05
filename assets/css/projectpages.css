@@ -7,7 +7,7 @@
   margin-top: 11%;    
   width: 38%;
   overflow-y: auto;
-  overflow-x: scroll;
+  overscroll-behavior-x: auto;
   scroll-snap-type: x mandatory;
   scale: 2.1;
   padding-top: 10px;
@@ -22,8 +22,3 @@
   width: 400px;
   object-fit: contain;
 }
-
-
-
-
-
