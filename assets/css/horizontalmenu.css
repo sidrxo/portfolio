@@ -81,6 +81,13 @@
 
 		display: none;
 	}
+
+
+	#mainMenu {
+
+		padding-left: 0;
+		left: 10%
+	}
 	
 
 
