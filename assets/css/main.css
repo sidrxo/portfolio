@@ -104,24 +104,13 @@ h3 {
 
 #picture3{
 	background-image: url("../../images/pic03.png");
-	width: 45%;
-	height: 350px;
-	background-size: 125% !important;
-	background-position: center;
-	background-repeat: no-repeat;
-	overflow: hidden;	
-	-webkit-transition: background-size 500ms ease;
-	-moz-transition: background-size 500 ease;
-	-o-transition: background-size 500 ease;
-	-ms-transition: background-size 500ms ease;
-	transition: background-size 500ms ease;	
+	background-size: 125%;
 }
 
 #picture4{
 	background-image: url("../../images/pic04.jpg");
 	background-size: 110%;
 }
-
 
 #picture3:hover {
 	background-size: 200% !important;  		
@@ -130,6 +119,8 @@ h3 {
 #picture4:hover {
 	background-size: 150% !important;  		
 }
+
+
 
 .progress-container {
 	z-index: 10;
