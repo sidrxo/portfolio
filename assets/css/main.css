@@ -35,6 +35,7 @@ body{
 	padding-right: 10%;
 	overflow: hidden;
 	width: 80vw;	
+	cursor: pointer;
   }
 
 
@@ -103,19 +104,6 @@ h3 {
 
 #picture3{
 	background-image: url("../../images/pic03.png");
-}
-
-#picture4{
-	background-image: url("../../images/pic04.jpg");
-	background-size: 110%;
-}
-
-#picture4:hover {
-	background-size: 150% !important;  		
-}
-
-
-#picture3{
 	width: 45%;
 	height: 350px;
 	background-size: 125% !important;
@@ -129,8 +117,18 @@ h3 {
 	transition: background-size 500ms ease;	
 }
 
+#picture4{
+	background-image: url("../../images/pic04.jpg");
+	background-size: 110%;
+}
+
+
 #picture3:hover {
 	background-size: 200% !important;  		
+}
+
+#picture4:hover {
+	background-size: 150% !important;  		
 }
 
 .progress-container {
