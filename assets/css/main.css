@@ -5,6 +5,7 @@ body{
 
 
 #nameheader {
+	width: fit-content;
 	position: relative;
 	padding-left: 10%;
 	color: black;
