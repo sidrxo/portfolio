@@ -4,6 +4,8 @@ body{
 }
 
 
+
+
 #nameheader {
 	width: fit-content;
 	position: relative;
@@ -23,8 +25,8 @@ body{
 	position: relative;
 	font-family: Helvetica;
 	margin: 0;
-	padding-left: 10% ;	
-	padding-right: 10%;
+	float: left;
+	left: 10vw;
 	overflow: hidden;
 	width: 80vw;	
 	cursor: pointer;
@@ -92,11 +94,13 @@ h3 {
 
 #picture2{
 	background-image: url("../../images/pic02.png");
+	background-size: 115%;
+
 }
 
 #picture3{
 	background-image: url("../../images/pic03.png");
-	background-size: 125%;
+	background-size: 160%;
 }
 
 #picture4{
@@ -116,7 +120,7 @@ h3 {
 
 .progress-container {
 	z-index: 10;
-	width: 100%;
+	width: 100vw;
 	height: 8px;
 	background: #ccc;
 	position: fixed;
