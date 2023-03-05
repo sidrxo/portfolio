@@ -157,3 +157,19 @@ h3 {
 	transition: opacity 0.7s;
   }
   
+  @media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	[class*="doubletile"] {
+	  width: 100vw;
+	  flex-flow: column wrap;
+	}
+
+	[class*="wide"] {
+		width: 100%;
+	  }
+
+	[class*="narrow"] {
+	width: 100%;
+	}
+	
+}
