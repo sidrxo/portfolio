@@ -26,7 +26,9 @@ body{
 	
 .doubletile {
 	display: flex;
-	height: 350px;
+	flex-direction: row ;
+	flex-wrap: wrap; 
+	position: relative;
 	font-family: Helvetica;
 	margin: 0;
 	padding-left: 10% ;	
@@ -35,19 +37,11 @@ body{
 	width: 80vw;	
   }
 
-  .doubletile2 {
-	display: flex;
-	height: 350px;
-	font-family: Helvetica;
-	margin: 0;
-	padding-left: 10% ;	
-	padding-right: 10%;
-	overflow: hidden;
-	width: 80%;
-  }
+
 
 		.wide {
 			width: 55%;
+			height: 350px;
 			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -59,7 +53,8 @@ body{
 			transition: background-size 500ms ease;		
 		}
 		.narrow {
-			flex: 1;
+			width: 45%;
+			height: 350px;
 			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -112,11 +107,17 @@ h3 {
 
 #picture4{
 	background-image: url("../../images/pic04.jpg");
+	background-size: 110%;
+}
+
+#picture4:hover {
+	background-size: 150% !important;  		
 }
 
 
 #picture3{
-	flex: 1;
+	width: 45%;
+	height: 350px;
 	background-size: 125% !important;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -129,7 +130,7 @@ h3 {
 }
 
 #picture3:hover {
-	background-size: 170% !important;  		
+	background-size: 200% !important;  		
 }
 
 .progress-container {
@@ -156,15 +157,3 @@ h3 {
 	transition: opacity 0.7s;
   }
   
-
-  @media (max-width: 768px) {
-	.doubletile {
-	flex-direction: column;
-	height: auto;
-	}
-	
-	.wide, .narrow {
-	width: 100%;
-	}
-	}
-	
