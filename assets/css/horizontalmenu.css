@@ -1,79 +1,74 @@
-
 #mainMenu {
-	margin:0px;
-	width:80%;
-    font-size: 1em;
-    position: relative;
+	margin: 0px;
+	width: 80%;
+	font-size: 1em;
+	position: relative;
 	padding-left: 10%;
-	padding-bottom: 5%;
+	padding-bottom: 3%;
 	margin-top: -30px;
 }
 
 
 #mainMenu a {
-	display:block;
-	float:left;
-	border:1px solid white;
-	width:140px;
-	padding:3px;
-	text-decoration:none;
-	background-color:#fff;
+	display: block;
+	float: left;
+	width: 140px;
+	text-decoration: none;
+	background-color: #fff;
 	color: black;
-    opacity: 0.4;
+	opacity: 0.4;
 	font-family: Helvetica;
 
 }
 
 #mainMenu a:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
-#arrow
-{
-    position: absolute;
-    width: 10%;
-    transform: scaleY(-1);
-    top: 270px;
-    right: 45%;
-    rotate: -16deg;
+
+
+
+#arrow {
+	position: absolute;
+	width: 10%;
+	transform: scaleY(-1);
+	top: 295px;
+	right: 1060px;
+	rotate: -16deg;
 
 }
 
 .linkedin {
-	display: inline-block;
 	position: absolute;
-    top: 234px;
-    right: 42%;
+	top: 260px;
+	right: 1020px;
 	opacity: 0.5;
 }
 
 .email {
-	display: inline-block;
 	position: absolute;
-    top: 234px;
-    right: 38%;
+	top: 260px;
+	right: 960px;
 	opacity: 0.5;
 }
 
-.linkedin:hover
-{
+.linkedin:hover {
 	opacity: 1;
 }
 
-.email:hover
-{
+.email:hover {
 	opacity: 1;
 }
 
 
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
-	
+
 	[class*="linkedin"] {
 		position: absolute;
-		top:  13%;
+		top: 13%;
 		right: 100px;
-		opacity: 0.5;	
+		opacity: 0.5;
 		transform: scale(0.9);
 	}
 
@@ -88,14 +83,14 @@
 		padding-left: 0;
 		left: 10%
 	}
-	
+
 
 
 	[class*="email"] {
 		position: absolute;
-		top:  13%;
+		top: 13%;
 		right: 50px;
-		opacity: 0.5;	
+		opacity: 0.5;
 		transform: scale(0.9);
 	}
 }
