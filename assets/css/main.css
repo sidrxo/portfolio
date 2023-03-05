@@ -1,6 +1,5 @@
 body{
 	margin: 0;
-    padding:0;
 }
 
 
@@ -31,9 +30,6 @@ body{
 	width: 80vw;	
 	cursor: pointer;
   }
-
-
-
 		.wide {
 			width: 55%;
 			height: 350px;
@@ -50,7 +46,6 @@ body{
 		.narrow {
 			width: 45%;
 			height: 350px;
-			background-size: 100%;
 			background-position: center;
 			background-repeat: no-repeat;
 			overflow: hidden;	
@@ -90,6 +85,7 @@ h3 {
 
 #picture1{
 	background-image: url("../../images/pic01.jpg");
+	background-size: 100%;
 }
 
 #picture2{
@@ -106,6 +102,17 @@ h3 {
 #picture4{
 	background-image: url("../../images/pic04.jpg");
 	background-size: 110%;
+}
+
+
+
+#picture1:hover {
+	background-size: 150% !important;
+	overflow: hidden;
+}
+
+#picture2:hover {
+	background-size: 150% !important;  		
 }
 
 #picture3:hover {
