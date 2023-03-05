@@ -12,7 +12,6 @@ body{
 	font-size: 2em;
 	line-height: 2em;
 	padding-top: 10%;
-	animation: 0.5s ease-out 0s 1;
 	}
 
 
@@ -33,7 +32,7 @@ body{
 	padding-left: 10% ;	
 	padding-right: 10%;
 	overflow: hidden;
-		
+	width: 80vw;	
   }
 
   .doubletile2 {
@@ -44,7 +43,7 @@ body{
 	padding-left: 10% ;	
 	padding-right: 10%;
 	overflow: hidden;
-		
+	width: 80%;
   }
 
 		.wide {
@@ -117,7 +116,7 @@ h3 {
 
 
 #picture3{
-flex: 1;
+	flex: 1;
 	background-size: 125% !important;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -157,3 +156,15 @@ flex: 1;
 	transition: opacity 0.7s;
   }
   
+
+  @media (max-width: 768px) {
+	.doubletile {
+	flex-direction: column;
+	height: auto;
+	}
+	
+	.wide, .narrow {
+	width: 100%;
+	}
+	}
+	
