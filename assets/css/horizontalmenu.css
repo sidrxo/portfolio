@@ -39,8 +39,7 @@
 
 }
 
-#linkedin {
-	position: absolute;
+.linkedin {
 	display: inline-block;
 	position: absolute;
     top: 230px;
@@ -48,23 +47,43 @@
 	opacity: 0.5;
 }
 
-#email {
-	position: absolute;
+.email {
 	display: inline-block;
 	position: absolute;
     top: 230px;
     right: 545px;
 	opacity: 0.5;
-
 }
 
-#linkedin:hover
+.linkedin:hover
 {
 	opacity: 1;
 }
 
-#email:hover
+.email:hover
 {
 	opacity: 1;
 }
 
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	
+	[class*="linkedin"] {
+		position: absolute;
+		top:  13%;
+		right: 100px;
+		opacity: 0.5;	
+		transform: scale(0.9);
+	}
+	
+
+
+	[class*="email"] {
+		position: absolute;
+		top:  13%;
+		right: 50px;
+		opacity: 0.5;	
+		transform: scale(0.9);
+	}
+}
