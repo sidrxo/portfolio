@@ -41,7 +41,7 @@ body{
 			-moz-transition: background-size 500 ease;
 			-o-transition: background-size 500 ease;
 			-ms-transition: background-size 500ms ease;
-			transition: background-size 500ms ease;		
+			transition: background-size 500ms ease;
 		}
 		.narrow {
 			width: 45%;
@@ -54,7 +54,7 @@ body{
 			-o-transition: background-size 500 ease;
 			-ms-transition: background-size 500ms ease;
 			transition: background-size 500ms ease;	
-		}
+				}
 
 		.wide:hover {
 			background-size: 130%;  		}
@@ -85,7 +85,7 @@ h3 {
 
 #picture1{
 	background-image: url("../../images/pic01.jpg");
-	background-size: 100%;
+	background-size: 101%;
 }
 
 #picture2{
@@ -112,11 +112,11 @@ h3 {
 }
 
 #picture2:hover {
-	background-size: 150% !important;  		
+	background-size: 145% !important;  		
 }
 
 #picture3:hover {
-	background-size: 200% !important;  		
+	background-size: 220% !important;  		
 }
 
 #picture4:hover {

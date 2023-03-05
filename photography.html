@@ -5,66 +5,60 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="./images/srlogonobg.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/projectpages.css" />
-		<link rel="stylesheet"href="assets/css/horizontalmenu.css" />
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="assets/css/horizontalmenu.css" />
 		<script type="text/javascript" src="./assets/js/main.js"></script>
 	</head>
 	
 	<div id="bar">
-		<div class="progress-container" style = "position: fixed;">
+		<div class="progress-container">
 			<div class="progress-bar" id="myBar"></div>
 		</div>
 	</div>
 
 	<body>
-		<div>
-		<header id = nameheader> 
+		
+		<header id = nameheader>
 			<h1>SID<br>RAO</h1>		
 		</header>
-		</div>
-		<div>		
-			<nav>
-			<ul id="mainMenu">
-				<li><a href="index.html">product design</a></li>
-				<li><a href="" style = "opacity:1;">photography</a></li>
-				<li><a href="resume.html">resume</a></li>
-				<li><a>contact</a></li>
-			</ul>
-			</nav>
-		</div>
-		<img id="arrow" src="images/ezgif-2-1f575f9518-removebg-preview.png" alt="">
-		<div id = "linkedin" onclick="window.open('https://www.linkedin.com/in/sid-rao-dzn/')" style="cursor: pointer;"> <img src="./images/linkedin.png"width="50"></div>
-		<div id = "email" 	onclick="window.open('mailto:sidrao@email.com')"style="cursor: pointer;"> <img src="./images/toppng.com-font-email-comments-email-icon-square-981x981.png"width="50"></div>
-		
-		<div id = "bioheader">
-		</div>
 
-		<div class="doubletile">
-			<div class = "wide" id = "picture1" onclick="location.href='./gogrind.html';" style="cursor: pointer;">
-					<h2>go grind</h2>
-					<h3>portable coffee grinder</h3>
-			</div>
-			<div class = "narrow" id = "picture2" onclick="location.href='./vnl1.html';" style="cursor: pointer;">
-				<div class = "narrow" id="text2">
+	
+	
+			<ul id="mainMenu">
+				<a href="" style = "opacity:1;" id = "hidePd">product design</a>
+				<a href="photography.html">photography</a>
+				<a href="resume.html">resume</a>
+				<a>contact</a>
+			</ul>
+
+
+		<img id="arrow" src="images/ezgif-2-1f575f9518-removebg-preview.png" alt="">
+		<div class = "linkedin" onclick="window.open('https://www.linkedin.com/in/sid-rao-dzn/')" style="cursor: pointer;"> <img src="./images/linkedin.png"width="50"></div>
+		<div class = "email" 	onclick="window.open('mailto:sidrao@email.com')"style="cursor: pointer;"> <img src="./images/toppng.com-font-email-comments-email-icon-square-981x981.png"width="50"></div>
+		
+
+
+			<div class="doubletile">
+				<div class="wide" id="picture1" onclick="loadProjectPage('./gogrind.html');">
+				  <h2>go grind</h2>
+				  <h3>portable coffee grinder</h3>
+				</div>
+				<div class="narrow" id="picture2" onclick="loadProjectPage('./vnl1.html');">
 					<h2>VNL1</h2>
 					<h3>family record player</h3>
+				  </div>
+				<div class="narrow" id="picture3" onclick="loadProjectPage('./quiet.html');">
+				  <h2>quiet.</h2>
+				  <h3>medical insommnia solution</h3>
 				</div>
-			</div>
-		</div>
-		
-		<div class="doubletile">
-			<div id = "picture3" onclick="location.href='./quiet.html';" style="cursor: pointer;">
-				<h2>quiet.</h2>
-				<h3>hospital sleep aid</h3>
-			</div>
-			<div class = "wide" id = "picture4" onclick="location.href='./cad.html';" style="cursor: pointer;">
-				<h2>CAD</h2>
-				<h3>render weekly projects</h3>
-			</div>
-		</div>
+				<div class="wide" id="picture4" onclick="loadProjectPage('./cad.html');">
+					<h2>keyshot</h2>
+					<h3>extra render work</h3>
+				  </div>
+				</div>
+	
+			<div id = "projectContent"></div>
 
-
-
-	</body> 
+	</body>
