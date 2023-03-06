@@ -12,8 +12,13 @@
   scale: 2.1;
   padding-top: 10px;
   padding-bottom: 20px;
+  scrollbar-width: none;
 }
 
+.horizontal-snap::-webkit-scrollbar {
+  display: none;
+
+} 
 .horizontal-snap > a {
   scroll-snap-align: center;
 }
