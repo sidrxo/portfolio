@@ -39,6 +39,7 @@ body{
 			-ms-transition: background-size 500ms ease;
 			transition: background-size 500ms ease;
 			margin: 5px;
+			filter: saturate(0);
 		}
 		.narrow {
 			width: 40%;
@@ -52,14 +53,19 @@ body{
 			-ms-transition: background-size 500ms ease;
 			transition: background-size 500ms ease;	
 			margin: 5px;
+			filter: saturate(0);
 
 		
 		}
 
 		.wide:hover {
-			background-size: 130%;  		}
+			background-size: 130%;  	
+			filter: saturate(1);
+		}
 		.narrow:hover {
-			background-size: 130%;  		}
+			background-size: 130%;  	
+			filter: saturate(1);
+		}
 
 		
 h2 {
@@ -88,6 +94,7 @@ h3 {
 #picture1{
 	background-image: url("../../images/pic01.jpg");
 	background-size: 101%;
+	
 }
 
 #picture2{
