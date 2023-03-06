@@ -19,7 +19,7 @@ function myFunction() {
       // Populate the new div with the fetched data
       newContent.html(data);
       // Slide out the old content and slide in the new content simultaneously
-      $('#projectContent, .doubletile').animate({left: '-250%'}, 'slow', function() {
+      $('#projectContent, .doubletile').animate({left: '-500%'}, 'slow', function() {
         // Once the slide-out is complete, remove the old content and move the new content into #projectContent
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
