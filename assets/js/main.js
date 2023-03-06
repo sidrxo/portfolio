@@ -12,7 +12,7 @@ function loadProjectPage(url) {
     $('.doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
       // Create a new div to slide in from the right
       var newContent = $('<div>').attr('id', 'newContent').css({
-        position: 'absolute',
+        position: 'relative',
         top: 0,
         right: '-100%',
         width: '100%',
