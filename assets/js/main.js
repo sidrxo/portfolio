@@ -10,7 +10,7 @@ function myFunction() {
     $.get(url, function(data) {
       // Create a new div to hold the new content
       var newContent = $('<div>').attr('id', 'newContent').css({
-        position: 'relative',
+        position: 'static',
         marginTop: '11%`',
         right: '-100%',
         width: '80vw',
