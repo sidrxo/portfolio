@@ -1,6 +1,6 @@
 #mainMenu {
 	margin: 0px;
-	width: 80%;
+	width: 90%;
 	font-size: 1em;
 	position: relative;
 	padding-left: 10%;
@@ -12,19 +12,20 @@
 #mainMenu a {
 	display: block;
 	float: left;
-	width: 140px;
+	width: 160px;
 	text-decoration: none;
 	background-color: #fff;
 	color: black;
 	opacity: 0.4;
-	font-family: Helvetica;
+	font-family: "roc-grotesk-wide", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin-right: 50px;
 }
 
 #mainMenu a:hover {
 	opacity: 1;
 }
-
-
 
 
 #arrow
@@ -33,7 +34,7 @@
     width: 10%;
     transform: scaleY(-1);
     top: 270px;
-    right: 47%;
+    right: 31%;
     rotate: -16deg;
 
 }
@@ -42,7 +43,7 @@
 	display: inline-block;
 	position: absolute;
     top: 234px;
-    right: 44%;
+    right: 28%;
 	opacity: 0.5;
 }
 
@@ -50,7 +51,7 @@
 	display: inline-block;
 	position: absolute;
     top: 234px;
-    right: 40%;
+    right: 24%;
 	opacity: 0.5;
 }
 

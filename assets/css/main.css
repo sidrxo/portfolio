@@ -7,7 +7,9 @@ body{
 	position: relative;
 	left: 10%;
 	color: black;
-	font-family: Helvetica;
+	font-family: "roc-grotesk-extrawide", sans-serif;
+	font-weight: 600;
+	font-style: normal;
 	font-size: 2em;
 	line-height: 2em;
 	padding-top: 10%;
@@ -22,12 +24,13 @@ body{
 	font-family: Helvetica;
 	margin: 0;
 	float: left;
+	left: 10vw;
 	overflow: hidden;
-	width: 100vw;	
+	width: 80vw;	
 	cursor: pointer;
   }
 		.wide {
-			width: 55%;
+			width: 59%;
 			height: 350px;
 			background-size: 100%;
 			background-position: center;
@@ -39,10 +42,9 @@ body{
 			-ms-transition: background-size 500ms ease;
 			transition: background-size 500ms ease;
 			margin: 5px;
-			filter: saturate(0);
 		}
 		.narrow {
-			width: 40%;
+			width: 39%;
 			height: 350px;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -53,19 +55,13 @@ body{
 			-ms-transition: background-size 500ms ease;
 			transition: background-size 500ms ease;	
 			margin: 5px;
-			filter: saturate(0);
 
-		
 		}
 
 		.wide:hover {
-			background-size: 130%;  	
-			filter: saturate(1);
-		}
+			background-size: 130%;  		}
 		.narrow:hover {
-			background-size: 130%;  	
-			filter: saturate(1);
-		}
+			background-size: 130%;  		}
 
 		
 h2 {
@@ -73,8 +69,10 @@ h2 {
 	position: absolute;	
 	padding-left: 7%;
 	padding-top: 4em;
-	letter-spacing: .1rem;
 	font-size: 2em;
+	font-family: "roc-grotesk-extrawide", sans-serif;
+	font-weight: 600;
+	font-style: normal;
 
 
 }
@@ -84,7 +82,9 @@ h3 {
 	position: absolute;
 	padding-left: 7%;
 	padding-top: 12em;
-	font-weight: lighter;
+	font-family: "roc-grotesk-wide", sans-serif;
+	font-weight: 500;
+	font-style: normal;
 	font-size: 1em;
 
 }
@@ -94,30 +94,33 @@ h3 {
 #picture1{
 	background-image: url("../../images/pic01.jpg");
 	background-size: 101%;
-	
+	margin-left: 0;
 }
 
 #picture2{
 	background-image: url("../../images/pic02.png");
 	background-size: 115%;
+	margin-right: 0;
 
 }
 
 #picture3{
 	background-image: url("../../images/pic03.png");
 	background-size: 160%;
+	margin-left: 0;
 }
 
 #picture4{
 	background-image: url("../../images/pic04.jpg");
 	background-size: 110%;
+	margin-right: 0;
+
 }
 
 
 
 #picture1:hover {
 	background-size: 150% !important;
-	overflow: hidden;
 }
 
 #picture2:hover {
@@ -125,7 +128,7 @@ h3 {
 }
 
 #picture3:hover {
-	background-size: 220% !important;  		
+	background-size: 240% !important;  		
 }
 
 #picture4:hover {
