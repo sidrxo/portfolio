@@ -13,8 +13,8 @@ function myFunction() {
         position: 'absolute',
         top: 0,
         right: '-100%',
-        width: '100%',
-        height: '100%',
+        width: '80vw',
+        height: 'fill-content',
         background: '#fff'
       }).appendTo('body');
       // Populate the new div with the fetched data
