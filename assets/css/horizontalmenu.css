@@ -33,25 +33,25 @@
     position: absolute;
     width: 10%;
     transform: scaleY(-1);
+	float: left; 
     top: 270px;
-    right: 31%;
+    left: 59%;
     rotate: -16deg;
 
 }
 
 .linkedin {
-	display: inline-block;
 	position: absolute;
-    top: 234px;
-    right: 28%;
+	float: left; 
+    top: 230px;
+    left: 68%;
 	opacity: 0.5;
 }
 
 .email {
-	display: inline-block;
 	position: absolute;
-    top: 234px;
-    right: 24%;
+    top: 230px;
+    left: 72%;
 	opacity: 0.5;
 }
 
