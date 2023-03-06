@@ -25,14 +25,9 @@ function loadProjectPage(url) {
       // Slide in the new div from the right
       newContent.animate({right: 0}, 'slow', function() {
         // Once the slide-in is complete, remove the old content and the new div
-       
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
       });
     });
   });
 }
-
-
-  
-$.getScript('/assets/js/clickbuttons.js');
