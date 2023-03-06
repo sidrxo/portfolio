@@ -23,8 +23,6 @@ function myFunction() {
       $('#projectContent, .doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
         // Once the slide-out is complete, remove the old content and move the new content into #projectContent
         $('.doubletile, .doubletile2').remove();
-        $('#projectContent').removeAttr('style').empty().append(newContent.contents());
-        newContent.remove();
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
       });
