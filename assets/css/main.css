@@ -2,9 +2,6 @@ body{
 	margin: 0;
 }
 
-
-
-
 #nameheader {
 	width: fit-content;
 	position: relative;
@@ -25,9 +22,8 @@ body{
 	font-family: Helvetica;
 	margin: 0;
 	float: left;
-	left: 10vw;
 	overflow: hidden;
-	width: 80vw;	
+	width: 100vw;	
 	cursor: pointer;
   }
 		.wide {

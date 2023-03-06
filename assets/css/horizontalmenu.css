@@ -27,27 +27,30 @@
 
 
 
-#arrow {
-	position: absolute;
-	width: 10%;
-	transform: scaleY(-1);
-	top: 295px;
-	right: 1055px;
-	rotate: -16deg;
+#arrow
+{
+    position: absolute;
+    width: 10%;
+    transform: scaleY(-1);
+    top: 270px;
+    right: 47%;
+    rotate: -16deg;
 
 }
 
 .linkedin {
+	display: inline-block;
 	position: absolute;
-	top: 260px;
-	right: 1020px;
+    top: 234px;
+    right: 44%;
 	opacity: 0.5;
 }
 
 .email {
+	display: inline-block;
 	position: absolute;
-	top: 260px;
-	right: 960px;
+    top: 234px;
+    right: 40%;
 	opacity: 0.5;
 }
 
@@ -80,10 +83,11 @@
 	#mainMenu {
 		padding-left: 0;
 		left: 10%; 
+		margin-bottom: -px;
 	}
 
 	#mainMenu a {
-		line-height: 2em;
+	line-height: 2em;
 	}
 
 
