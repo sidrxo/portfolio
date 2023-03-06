@@ -13,7 +13,6 @@ function myFunction() {
         position: 'relative',
         top: '50px',
         right: '-100%',
-        width: '80vw',
         height: 'fill-content',
         background: '#fff'
       }).appendTo('body');
