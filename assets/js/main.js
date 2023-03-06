@@ -11,7 +11,7 @@ function myFunction() {
       // Create a new div to hold the new content
       var newContent = $('<div>').attr('id', 'newContent').css({
         position: 'relative',
-        top: '8px',
+        top: '5px',
         right: '-100%',
         height: 'fill-content',
         background: '#fff'
