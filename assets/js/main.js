@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM fully loaded and parsed");
   window.onscroll = function() {myFunction()};
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -20,28 +19,7 @@ function loadProjectPage(url) {
     });
   });
 }
-
-const scrollLeftButton = document.getElementById("scroll-left");
-const scrollRightButton = document.getElementById("scroll-right");
-const scrollContainer = document.querySelector(".horizontal-snap");
-const scrollAmount = 400;
-
-scrollLeftButton.addEventListener("click", () => {
-  scrollContainer.scrollBy({
-    left: -scrollAmount,
-    behavior: "smooth"
-  });
-});
-
-scrollRightButton.addEventListener("click", () => {
-  scrollContainer.scrollBy({
-    left: scrollAmount,
-    behavior: "smooth"
-  });
-});
-
-
-
+console.log("DOM fully loaded and parsedMAIN");
 });
   
   
