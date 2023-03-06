@@ -76,7 +76,6 @@
 	}
 
 	#arrow {
-
 		display: none;
 	}
 
@@ -84,12 +83,16 @@
 	#mainMenu {
 		padding-left: 0;
 		left: 10%; 
-		margin-bottom: -px;
 	}
 
 	#mainMenu a {
 	line-height: 2em;
+	width: 70px;
+
 	}
+
+
+	
 
 
 
