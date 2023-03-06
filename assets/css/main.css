@@ -108,12 +108,15 @@ h3 {
 	background-image: url("../../images/pic03.png");
 	background-size: 160%;
 	margin-left: 0;
+	margin-bottom: 0;
+
 }
 
 #picture4{
 	background-image: url("../../images/pic04.jpg");
 	background-size: 110%;
 	margin-right: 0;
+	margin-bottom: 0;
 
 }
 
