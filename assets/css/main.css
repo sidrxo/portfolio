@@ -1,11 +1,6 @@
 body{
 	margin: 0;
-	scrollbar-width: none;
 }
-
-.body::-webkit-scrollbar {
-	display: none;
-  } 
 
 #nameheader {
 	width: fit-content;
