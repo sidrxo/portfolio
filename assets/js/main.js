@@ -25,7 +25,6 @@ function myFunction() {
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
       });
-      newContent.animate({right: 0}, 'slow');
     });
   }
   
