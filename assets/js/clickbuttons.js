@@ -18,9 +18,6 @@ scrollRightButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
-
-console.log("DOM fully loaded and parsed");
-
 });
   
   
