@@ -11,15 +11,15 @@ function myFunction() {
       // Create a new div to hold the new content
       var newContent = $('<div>').attr('id', 'newContent').css({
         position: 'relative',
-        top: '5px',
-        right: '-100%',
+        top: '5px ',
+        right: '-200%',
         height: 'fill-content',
         background: '#fff'
       }).appendTo('body');
       // Populate the new div with the fetched data
       newContent.html(data);
       // Slide out the old content and slide in the new content simultaneously
-      $('#projectContent, .doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
+      $('#projectContent, .doubletile, .doubletile2').animate({left: '-200%'}, 'slow', function() {
         // Once the slide-out is complete, remove the old content and move the new content into #projectContent
         $('.doubletile, .doubletile2').remove();
         // Run /assets/js/clickbuttons.js after the new content has loaded
