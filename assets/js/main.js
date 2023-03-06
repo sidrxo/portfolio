@@ -10,9 +10,8 @@ function myFunction() {
     $.get(url, function(data) {
       // Create a new div to hold the new content
       var newContent = $('<div>').attr('id', 'newContent').css({
-        display: 'inline',
         position: 'relative',
-        top: '5px',
+        top: '5px ',
         right: '-100%',
         height: 'fill-content',
         background: '#fff'
@@ -20,8 +19,9 @@ function myFunction() {
       // Populate the new div with the fetched data
       newContent.html(data);
       // Slide out the old content and slide in the new content simultaneously
-      $('#projectContent, .doubletile').animate({ transform: 'translateX(-100%)' }, 'slow', function() {
+      $('#projectContent, .doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
         // Once the slide-out is complete, remove the old content and move the new content into #projectContent
+        $('.doubletile, .doubletile2').remove();
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
       });
