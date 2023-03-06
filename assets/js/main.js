@@ -15,7 +15,6 @@ function loadProjectPage(url) {
       // Fade in the #projectContent element
       $('#projectContent').fadeIn('slow');
       // Run /assets/js/clickbuttons.js after the new content has loaded
-      $.getScript('/assets/js/clickbuttons.js');
     });
   });
 }
