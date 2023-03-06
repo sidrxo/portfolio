@@ -32,7 +32,6 @@
   background-color: #ccc;
   transition: background-color 0.2s;
   cursor: pointer;
-  bottom: 1%;
 }
 
 .scroll-button:hover {
