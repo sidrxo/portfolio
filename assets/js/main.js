@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
   window.onscroll = function() {myFunction()};
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -19,7 +18,6 @@ function loadProjectPage(url) {
     });
   });
 }
-console.log("DOM fully loaded and parsedMAIN");
-});
+
   
   
