@@ -10,6 +10,7 @@ function loadProjectPage(url) {
   $.get(url, function(data) {
     // Slide out the .doubletile and .doubletile2 elements to the left
     $('.doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
+      $('.doubletile, .doubletile2').remove();
       // Create a new div to slide in from the right
       var newContent = $('<div>').attr('id', 'newContent').css({
         position: 'relative',
@@ -24,7 +25,6 @@ function loadProjectPage(url) {
       // Slide in the new div from the right
       newContent.animate({right: 0}, 'slow', function() {
         // Once the slide-in is complete, remove the old content and the new div
-        $('.doubletile, .doubletile2').remove();
         $('#projectContent').removeAttr('style').empty().append(newContent.contents());
         newContent.remove();
         // Run /assets/js/clickbuttons.js after the new content has loaded
