@@ -6,8 +6,11 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-function loadProjectPage(url) {
-  $.get(url, function(data) {
+$.ajax({
+  url: url,
+  type: 'GET',
+  async: true,
+  success: function(data) {
     // Fade out the .doubletile and .doubletile2 elements
     $('.doubletile, .doubletile2').fadeOut('slow', function() {
       // Once the fade-out is complete, update the content of #projectContent
@@ -16,8 +19,12 @@ function loadProjectPage(url) {
       $('#projectContent').fadeIn('slow');
       return false
     });
-  });
-}
+  },
+  error: function(xhr, status, error) {
+    console.error(error);
+  }
+});
+
 
   
   
