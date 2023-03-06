@@ -16,8 +16,9 @@ function loadProjectPage(url) {
       $('#projectContent').fadeIn('slow');
       return false
     });
-  });
+  }, true); // Set the async option to true
 }
+
 
   
   
