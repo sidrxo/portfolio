@@ -1,5 +1,3 @@
-document.addEventListener("load", function() {
-
 const scrollLeftButton = document.getElementById("scroll-left");
 const scrollRightButton = document.getElementById("scroll-right");
 const scrollContainer = document.querySelector(".horizontal-snap");
@@ -18,4 +16,4 @@ scrollRightButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
-});
+
