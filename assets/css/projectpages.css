@@ -46,11 +46,11 @@
 }
 
 #scroll-left {
-  left: 50px;
+  left: 70px;
 }
 
 #scroll-right {
-  right: 50px;
+  right: 70px;
 }
 
 @media only screen and (max-width: 768px) {
