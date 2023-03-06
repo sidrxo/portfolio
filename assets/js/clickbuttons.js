@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("load", function() {
 
 const scrollLeftButton = document.getElementById("scroll-left");
 const scrollRightButton = document.getElementById("scroll-right");
@@ -19,5 +19,3 @@ scrollRightButton.addEventListener("click", () => {
   });
 });
 });
-  
-  
