@@ -6,14 +6,11 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 } 
 
-function loadProjectPage(url) {
-  $.get(url, function(data) {
-    // Slide out the .doubletile and .doubletile2 elements to the left
-    $('.doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
-      $('.doubletile, .doubletile2').remove();
-      // Create a new div to slide in from the right
+  function loadProjectPage(url) {
+    $.get(url, function(data) {
+      // Create a new div to hold the new content
       var newContent = $('<div>').attr('id', 'newContent').css({
-        position: 'relative',
+        position: 'absolute',
         top: 0,
         right: '-100%',
         width: '100%',
@@ -22,12 +19,16 @@ function loadProjectPage(url) {
       }).appendTo('body');
       // Populate the new div with the fetched data
       newContent.html(data);
-      // Slide in the new div from the right
-      newContent.animate({right: 0}, 'slow', function() {
-        // Once the slide-in is complete, remove the old content and the new div
+      // Slide out the old content and slide in the new content simultaneously
+      $('#projectContent, .doubletile, .doubletile2').animate({left: '-100%'}, 'slow', function() {
+        // Once the slide-out is complete, remove the old content and move the new content into #projectContent
+        $('.doubletile, .doubletile2').remove();
+        $('#projectContent').removeAttr('style').empty().append(newContent.contents());
+        newContent.remove();
         // Run /assets/js/clickbuttons.js after the new content has loaded
         $.getScript('/assets/js/clickbuttons.js');
       });
+      newContent.animate({right: 0}, 'slow');
     });
-  });
-}
+  }
+  
