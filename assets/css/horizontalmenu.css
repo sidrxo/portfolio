@@ -1,6 +1,7 @@
 #mainMenu {
+	scroll-snap-align: top;
 	margin: 0px;
-	width: 90%;
+	width: fit-content;
 	font-size: 1em;
 	position: relative;
 	padding-left: 10%;
@@ -23,45 +24,34 @@
 	margin-right: 50px;
 }
 
+#mainMenu a:last-of-type {
+	position: relative;
+	float: right;
+    margin-top: -55px;
+}
+
+#mainMenu div {
+	position: relative;
+	float: right;
+    margin-top: -55px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+
+}
+
+
 #mainMenu a:hover {
 	opacity: 1;
 }
-
-
-#arrow
-{
-    position: absolute;
-    width: 10%;
-    transform: scaleY(-1);
-	float: left; 
-    top: 270px;
-    left: 59%;
-    rotate: -16deg;
-
+#mainMenu div {
+	opacity: 0.4;
 }
 
-.linkedin {
-	position: absolute;
-	float: left; 
-    top: 228px;
-    left: 68%;
-	opacity: 0.5;
-}
-
-.email {
-	position: absolute;
-    top: 228px;
-    left: 72%;
-	opacity: 0.5;
-}
-
-.linkedin:hover {
+#mainMenu div:hover {
 	opacity: 1;
 }
 
-.email:hover {
-	opacity: 1;
-}
 
 
 @media only screen and (max-width: 768px) {

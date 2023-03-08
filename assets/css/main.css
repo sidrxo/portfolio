@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+
 }
 
 #nameheader {
@@ -15,8 +16,14 @@ body{
 	padding-top: 10%;
 	}
 
+.container{
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+
 	
 .doubletile {
+	scroll-snap-align: top;
 	display: flex;
 	flex-direction: row ;
 	flex-wrap: wrap; 

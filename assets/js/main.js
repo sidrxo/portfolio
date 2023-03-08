@@ -28,4 +28,3 @@ function myFunction() {
       newContent.animate({right: 0}, 'slow');
     });
   }
-  
