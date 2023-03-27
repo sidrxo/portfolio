@@ -212,6 +212,7 @@ h3 {
 	color: #000000;
 	z-index: 200000;
 	background-color: #FFFFFF;
+	top: 50%;
   }
   
   .work-spinner {
