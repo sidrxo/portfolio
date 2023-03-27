@@ -1,0 +1,28 @@
+#picture5{
+	background-image: url("../../images/photography/milky.jpg");
+	background-size: 101%;
+	margin-left: 0;
+}
+
+#picture6{
+	background-image: url("../../images/pic02.png");
+	background-size: 115%;
+	margin-right: 0;
+
+}
+
+#picture7{
+	background-image: url("../../images/pic03.png");
+	background-size: 160%;
+	margin-left: 0;
+	margin-bottom: 0;
+
+}
+
+#picture8{
+	background-image: url("../../images/pic04.jpg");
+	background-size: 110%;
+	margin-right: 0;
+	margin-bottom: 0;
+
+}
