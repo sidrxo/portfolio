@@ -210,12 +210,12 @@ h3 {
   left:0;
   bottom:0;
   right:0;
-  background:rgba(0,0,0,0.9);
+  background: white;
   transition: 1s 0.4s;
 }
 #progress{
   height:1px;
-  background:#fff;
+  background: black;
   position:absolute;
   width:0;
   top:50%;
