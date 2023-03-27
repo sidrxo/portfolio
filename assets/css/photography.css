@@ -5,14 +5,14 @@
 }
 
 #picture6{
-	background-image: url("../../images/pic02.png");
-	background-size: 115%;
+	background-image: url("../../images/photography/P1020384.jpg");
+	background-size: 160%;
 	margin-right: 0;
 
 }
 
 #picture7{
-	background-image: url("../../images/pic03.png");
+	background-image: url("../../images/photography/2.jpg");
 	background-size: 160%;
 	margin-left: 0;
 	margin-bottom: 0;
@@ -20,9 +20,25 @@
 }
 
 #picture8{
-	background-image: url("../../images/pic04.jpg");
+	background-image: url("../../images/concreteshot.10.jpg");
 	background-size: 110%;
 	margin-right: 0;
 	margin-bottom: 0;
 
+}
+
+#picture5:hover {
+	background-size: 13 0% !important;
+}
+
+#picture6:hover {
+	background-size: 200% !important;  		
+}
+
+#picture7:hover {
+	background-size: 240% !important;  		
+}
+
+#picture8:hover {
+	background-size: 150% !important;  		
 }
