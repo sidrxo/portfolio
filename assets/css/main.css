@@ -203,8 +203,6 @@ h3 {
 }
 
 
-
-
 #overlay{
   position:fixed;
   z-index:99999;
@@ -228,7 +226,7 @@ h3 {
   position:absolute;
   top:50%;
   margin-top:-40px;
-  width:100%;
+  width:80%;
   text-align:center;
   color:#fff;
 }
