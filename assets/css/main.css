@@ -211,7 +211,7 @@ h3 {
   bottom:0;
   right:0;
   background: white;
-  transition: 1s 0.4s;
+  transition: 1s 1s;
 }
 #progress{
   height:1px;
