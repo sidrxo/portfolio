@@ -37,9 +37,12 @@
 	margin-right: 10px;
 	margin-left: 10px;
 
-
 }
 
+
+.email:hover + #mainMenu {
+opacity: 1;
+}
 
 #mainMenu a:hover {
 	opacity: 1;
