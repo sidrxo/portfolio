@@ -99,20 +99,20 @@ h3 {
 
 
 #picture1{
-	background-image: url("../../images/pic01.jpg");
+	background-image: url("../../images/productdesign/pic01.jpg");
 	background-size: 101%;
 	margin-left: 0;
 }
 
 #picture2{
-	background-image: url("../../images/pic02.png");
+	background-image: url("../../images/productdesign/pic02.png");
 	background-size: 115%;
 	margin-right: 0;
 
 }
 
 #picture3{
-	background-image: url("../../images/pic03.png");
+	background-image: url("../../images/productdesign/pic03.png");
 	background-size: 160%;
 	margin-left: 0;
 	margin-bottom: 0;
@@ -120,7 +120,7 @@ h3 {
 }
 
 #picture4{
-	background-image: url("../../images/pic04.jpg");
+	background-image: url("../../images/productdesign/pic04.jpg");
 	background-size: 110%;
 	margin-right: 0;
 	margin-bottom: 0;
