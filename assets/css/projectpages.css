@@ -27,6 +27,8 @@
 .horizontal-snap img {
   width: 400px;
   object-fit: contain;
+  height: 300px;
+
 }
 
 .scroll-button {
