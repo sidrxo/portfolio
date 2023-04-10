@@ -1,14 +1,21 @@
 #mainMenu {
-	scroll-snap-align: top;
 	margin: 0px;
 	width: fit-content;
 	font-size: 1em;
-	position: relative;
+	position: absolute;
 	padding-left: 10%;
 	padding-bottom: 3%;
 	margin-top: -30px;
 }
 
+
+#mainMenu.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+  }
 
 #mainMenu a {
 	display: block;
